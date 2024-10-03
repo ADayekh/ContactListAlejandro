@@ -79,9 +79,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 			},
 
-			updateContact: (contact) => {
+			updateContact: (contact,id) => {
 				const {agenda, contacts} = getStore();
-				fetch (`https://playground.4geeks.com/contact/agendas/${agenda}/contacts/${contact.id}`, {
+				fetch (`https://playground.4geeks.com/contact/agendas/${agenda}/contacts/${id}`, {
 					method: "PUT",
 					body: JSON.stringify(contact),
 					headers:{"Content-Type": "application/json"}

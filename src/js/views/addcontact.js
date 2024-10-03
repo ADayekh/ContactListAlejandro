@@ -39,19 +39,19 @@ const AddContacts = () => {
     <div className="container">
         <form>
             <div className="form-group mt-3 mb-3">
-                <label for="formGroupName">Name</label>
+                <label htmlFor="formGroupName">Name</label>
                 <input type="text" className="form-control" id="formGroupName"  placeholder="Name" onChange={inputName}></input>
             </div>
             <div className="form-group mt-3 mb-3">
-                <label for="formGroupPhone">Phone</label>
+                <label htmlFor="formGroupPhone">Phone</label>
                 <input type="text" className="form-control" id="formGroupPhone" placeholder="Phone" onChange={inputPhone}></input>
             </div>
             <div className="form-group mt-3 mb-3">
-                <label for="formGroupEmail">Email</label>
+                <label htmlFor="formGroupEmail">Email</label>
                 <input type="text" className="form-control" id="formGroupEmail" placeholder="Email" onChange={inputEmail}></input>
             </div>
             <div className="form-group mt-3 mb-3">
-                <label for="formGroupAddress">Address</label>
+                <label htmlFor="formGroupAddress">Address</label>
                 <input type="text" className="form-control" id="formGroupAddress" placeholder="Address" onChange={inputAddress}></input>
             </div>
             <button onClick={handleAddContact} type="submit" className="btn btn-primary m-3">Save Contact</button>

@@ -34,15 +34,14 @@ const Contacts = () => {
     const closeModal = () => setShowModal(false)
 
     const handleUpdate = () => {
-       const updateContact = {name, phone, email, address};
-      actions.updateContact(currentId)
-      console.log (...updateContact, currentId);
+       const updateContact = {name: name, phone: phone, email: email, address: address};
+      actions.updateContact(updateContact,currentId)
     }
     return (
         <div>
-            {store.contacts.map((contact, index) => {
+            {store.contacts.map((contact) => {
                 return(
-                    <div key ={index}>
+                    <div key ={contact.id}>
                         <div className="card">
                             <div className="card-body">
                                 <h4 className="card-title"> {contact.name}</h4>
