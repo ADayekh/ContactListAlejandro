@@ -14,7 +14,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
-			contacts: [],
+			contacts: [{
+				name: "",
+				phone: "",
+				email: "",
+				address: "",
+				id: ""
+			}],
 			agenda: "alejandro_agenda"
 		},
 

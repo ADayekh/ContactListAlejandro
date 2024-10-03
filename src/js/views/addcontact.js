@@ -7,8 +7,6 @@ const AddContacts = () => {
     const [phone, setPhone] = useState("")
     const [email, setEmail] = useState("")
     const [address, setAddress] = useState("")
-
- 
     
     const inputName = (event) => {
         setName(event.target.value)
@@ -36,17 +34,7 @@ const AddContacts = () => {
         actions.addContact(addContact)
         }
     
-        const handleUpdateContact = () => {
-            let updateContact = {
-            "name": name,
-            "phone": phone,
-            "email": email,
-            "address": address,
-            "id": 16 ,
-            }
-            actions.updateContact(updateContact)
-            }
-
+   
     return (
     <div className="container">
         <form>
@@ -67,7 +55,6 @@ const AddContacts = () => {
                 <input type="text" className="form-control" id="formGroupAddress" placeholder="Address" onChange={inputAddress}></input>
             </div>
             <button onClick={handleAddContact} type="submit" className="btn btn-primary m-3">Save Contact</button>
-            <button onClick={handleUpdateContact} type="submit" className="btn btn-primary m-3">Update updateContact</button>
         </form>
         </div>
     )
