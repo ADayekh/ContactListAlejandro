@@ -88,7 +88,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}).then((response) => response.json())
 					.then((data) => {
 						const newContacts = contacts.map((contactItem) => {
-							if(contactItem.id == contact.id)
+							if(contactItem.id == id)
 								return data
 							else return contactItem
 						})

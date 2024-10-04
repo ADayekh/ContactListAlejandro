@@ -39,9 +39,9 @@ const Contacts = () => {
     }
     return (
         <div>
-            {store.contacts.map((contact) => {
+            {store.contacts.map((contact, index) => {
                 return(
-                    <div key ={contact.id}>
+                    <div key ={index}>
                         <div className="card">
                             <div className="card-body">
                                 <h4 className="card-title"> {contact.name}</h4>
