@@ -11,7 +11,7 @@ const Contacts = () => {
     const [address, setAddress] = useState("")
     const [currentId, setCurrentId] = useState(null)
     
-    useEffect (() => {actions.getAgenda()}, [actions])
+    useEffect (() => {actions.getAgenda()}, [])
 
     const inputName = (event) => setName(event.target.value);
     
