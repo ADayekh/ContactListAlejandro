@@ -1,6 +1,7 @@
 import React, { useContext,useState, useEffect } from "react";
 import { Context } from "../store/appContext";
 import {Modal, Button, Form} from "react-bootstrap"
+import { Link } from "react-router-dom";
 
 const Contacts = () => {
     const {store , actions} = useContext(Context);
@@ -89,9 +90,9 @@ const Contacts = () => {
                     </Modal.Footer>
                   </Modal>
         
-                     <a href="https://silver-zebra-wr9vgv76xvg6cgwrj-3000.app.github.dev/contacts/addcontacts">
+                     <Link to="addcontacts">
                     <button className="btn btn-primary mt-3">Add new contact</button>
-                    </a> 
+                    </Link>
         </div>
     )
 }
