@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 const AddContacts = () => {
     const {store, actions} = useContext(Context);
@@ -56,6 +57,9 @@ const AddContacts = () => {
             </div>
             <button onClick={handleAddContact} type="submit" className="btn btn-primary m-3">Save Contact</button>
         </form>
+                    <Link to="/contacts">
+                    <button className="btn btn-success mt-3">Return to Contact List</button>
+                    </Link>
         </div>
     )
 }
