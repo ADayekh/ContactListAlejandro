@@ -33,6 +33,10 @@ const AddContacts = () => {
         "address": address
         }
         actions.addContact(addContact)
+        setName("")
+        setAddress("")
+        setEmail("")
+        setPhone("")
         }
     
    
@@ -41,21 +45,21 @@ const AddContacts = () => {
         <form>
             <div className="form-group mt-3 mb-3">
                 <label htmlFor="formGroupName">Name</label>
-                <input type="text" value="name" className="form-control" id="formGroupName"  placeholder="Name" onChange={inputName}></input>
+                <input type="text" value={name} className="form-control" id="formGroupName"  placeholder="Name" onChange={inputName}></input>
             </div>
             <div className="form-group mt-3 mb-3">
                 <label htmlFor="formGroupPhone">Phone</label>
-                <input type="text" value="phone" className="form-control" id="formGroupPhone" placeholder="Phone" onChange={inputPhone}></input>
+                <input type="text" value={phone} className="form-control" id="formGroupPhone" placeholder="Phone" onChange={inputPhone}></input>
             </div>
             <div className="form-group mt-3 mb-3">
                 <label htmlFor="formGroupEmail">Email</label>
-                <input type="text" value="email" className="form-control" id="formGroupEmail" placeholder="Email" onChange={inputEmail}></input>
+                <input type="text" value={email} className="form-control" id="formGroupEmail" placeholder="Email" onChange={inputEmail}></input>
             </div>
             <div className="form-group mt-3 mb-3">
                 <label htmlFor="formGroupAddress">Address</label>
-                <input type="text" value="address" className="form-control" id="formGroupAddress" placeholder="Address" onChange={inputAddress}></input>
+                <input type="text" value={address} className="form-control" id="formGroupAddress" placeholder="Address" onChange={inputAddress}></input>
             </div>
-            <button onClick={handleAddContact} type="submit" className="btn btn-primary m-3">Save Contact</button>
+            <button onClick={handleAddContact} type="button" className="btn btn-primary m-3">Save Contact</button>
         </form>
                     <Link to="/contacts">
                     <button className="btn btn-success mt-3">Return to Contact List</button>
